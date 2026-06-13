@@ -1,4 +1,5 @@
 #include "led/ezdrv_led_template.h"
+#include <stddef.h>
 #include "ezbsp_log.h"
 
 //Write context in this struct
