@@ -15,6 +15,7 @@ macro(register_easy_bsp)
     file(GLOB_RECURSE EZBSP_SOURCES
         "${EZBSP_ROOT_DIR}/src/mock/*.c"
         "${EZBSP_ROOT_DIR}/src/dev/*.c"
+        "${EZBSP_ROOT_DIR}/src/drv/*.c"
         "${EZBSP_ROOT_DIR}/src/hal/*.c"
         "${EZBSP_ROOT_DIR}/src/drv_template/*.c"
         "${EZBSP_ROOT_DIR}/src/espressif/*.c"
@@ -33,7 +34,7 @@ macro(register_easy_bsp)
             SRCS "${EZBSP_SOURCES}"
             INCLUDE_DIRS "${EZBSP_INC_DIR}"
             # 添加了 log 组件依赖
-            REQUIRES esp_driver_gpio soc log esp_timer
+            REQUIRES esp_driver_gpio esp_driver_i2c soc log esp_timer
         )
         set(EZBSP_TARGET ${COMPONENT_LIB})
 
