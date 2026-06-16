@@ -4,7 +4,7 @@
 #include "als/ezdev_als.h"
 #include "ezbsp_time.h"
 
-#include "als/ezdrv_als_veml7700.h"
+#include "als/ezdev_als_veml7700.h"
 
 /**
  * @brief Internal logical context structure for each ALS device instance

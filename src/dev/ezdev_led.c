@@ -1,20 +1,20 @@
 #include <stdint.h>
 #include <stddef.h>
 #include "led/ezdev_led.h"
-#include "led/ezdrv_led_opt.h"
+#include "led/ezdev_led_opt.h"
 
 //include driver header
-#include "led/ezdrv_led_template.h"
+#include "led/ezdev_led_template.h"
 
 typedef struct ezdev_led_ctx {
     uint8_t subid;
-    ezdrv_led_opt_t* opt;
+    ezdev_led_opt_t* opt;
 } ezdev_led_ctx_t;
 
 //To be defined by board-specific code to initialize the led_ctxs array with appropriate function pointers and initial brightness values.
 ezdev_led_ctx_t led_ctxs[MAX_LED_DEVICES] = {
-    [LED_DEVICE_0] = {.subid = TEMPLATE_LED_0, .opt = &ezdrv_led_template_opt },
-    [LED_DEVICE_1] = {.subid = TEMPLATE_LED_1, .opt = &ezdrv_led_template_opt }
+    [LED_DEVICE_0] = {.subid = TEMPLATE_LED_0, .opt = &ezdev_led_template_opt },
+    [LED_DEVICE_1] = {.subid = TEMPLATE_LED_1, .opt = &ezdev_led_template_opt }
 };
 
 int ezdev_led_on(uint8_t dev_id)

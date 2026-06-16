@@ -1,5 +1,5 @@
-#ifndef EZDRV_LED_OPT_H
-#define EZDRV_LED_OPT_H
+#ifndef EZDEV_LED_OPT_H
+#define EZDEV_LED_OPT_H
 
 #include <stdint.h>
 
@@ -13,10 +13,10 @@ typedef struct {
     int (*toggle)(uint8_t subid);
     int (*set_brightness)(uint8_t subid, uint8_t brightness);
     int (*get_brightness)(uint8_t subid, uint8_t *brightness);
-} ezdrv_led_opt_t;
+} ezdev_led_opt_t;
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif //EZDRV_LED_OPT_H
+#endif //EZDEV_LED_OPT_H

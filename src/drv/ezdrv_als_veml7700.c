@@ -1,4 +1,4 @@
-#include "als/ezdrv_als_veml7700.h"
+#include "als/ezdev_als_veml7700.h"
 #include "ezhal/ezhal_i2c.h"
 #include "ezbsp_log.h"
 #include <stddef.h>
