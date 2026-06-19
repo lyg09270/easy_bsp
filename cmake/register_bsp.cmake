@@ -34,7 +34,7 @@ macro(register_easy_bsp)
             SRCS "${EZBSP_SOURCES}"
             INCLUDE_DIRS "${EZBSP_INC_DIR}"
             # 添加了 log 组件依赖
-            REQUIRES esp_driver_gpio esp_driver_i2c soc log esp_timer
+            REQUIRES esp_driver_gpio esp_driver_i2c esp_driver_spi soc log esp_timer
         )
         set(EZBSP_TARGET ${COMPONENT_LIB})
 
