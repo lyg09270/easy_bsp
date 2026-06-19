@@ -21,7 +21,7 @@
 
 #define SSD1681_PIN_RST                  10U
 #define SSD1681_PIN_DC                   11U
-#define SSD1681_PIN_CS                   18U
+#define SSD1681_PIN_CS                   3U
 #define SSD1681_PIN_BUSY                 2U
 
 #define SSD1681_BUSY_ACTIVE_LEVEL        EZHAL_GPIO_LEVEL_HIGH
